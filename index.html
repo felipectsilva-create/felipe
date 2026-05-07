@@ -395,6 +395,207 @@
             max-width:280px;
           }
         }
+
+        /* ===== BANNER ===== */
+
+    .banner{
+      height:70vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      padding:20px;
+    }
+
+    .banner-content h1{
+      font-size:4rem;
+      margin-bottom:20px;
+      text-shadow:2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .banner-content p{
+      font-size:1.3rem;
+      margin-bottom:25px;
+    }
+
+    .banner-content button{
+      padding:15px 30px;
+      border:none;
+      background:#ffcc00;
+      color:#000;
+      font-size:1rem;
+      font-weight:bold;
+      border-radius:10px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .banner-content button:hover{
+      background:#fff;
+      transform:scale(1.05);
+    }
+
+    /* ===== TÓPICOS ===== */
+
+    .topics{
+      padding:60px 10%;
+      background:#fff;
+    }
+
+    .topics h2{
+      text-align:center;
+      margin-bottom:40px;
+      color:#0b6623;
+      font-size:2.5rem;
+    }
+
+    .topic-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:25px;
+    }
+
+    .topic{
+      background:#0b6623;
+      color:#fff;
+      padding:30px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .topic:hover{
+      transform:translateY(-8px);
+      background:#128c3d;
+    }
+
+    .topic h3{
+      margin:15px 0;
+      font-size:1.4rem;
+    }
+
+    /* ===== CARDS ===== */
+
+    .cards-section{
+      padding:60px 10%;
+      background:#f0f0f0;
+    }
+
+    .cards-section h2{
+      text-align:center;
+      margin-bottom:40px;
+      color:#0b6623;
+      font-size:2.5rem;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 5px 20px rgba(0,0,0,0.15);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:15px;
+      color:#0b6623;
+    }
+
+    /* ===== CARROSSEL ===== */
+
+    .carousel-section{
+      padding:60px 0;
+      background:#fff;
+      overflow:hidden;
+    }
+
+    .carousel-section h2{
+      text-align:center;
+      margin-bottom:40px;
+      color:#0b6623;
+      font-size:2.5rem;
+    }
+
+    .carousel{
+      display:flex;
+      width:max-content;
+      animation:slide 18s linear infinite;
+      gap:20px;
+    }
+
+    .carousel img{
+      width:320px;
+      height:200px;
+      object-fit:cover;
+      border-radius:15px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    @keyframes slide{
+      0%{
+        transform:translateX(0);
+      }
+
+      100%{
+        transform:translateX(-50%);
+      }
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer{
+      background:#0b6623;
+      color:#fff;
+      text-align:center;
+      padding:25px;
+      margin-top:40px;
+    }
+
+    /* ===== RESPONSIVO ===== */
+
+    @media(max-width:768px){
+
+      .banner-content h1{
+        font-size:2.5rem;
+      }
+
+      .banner-content p{
+        font-size:1rem;
+      }
+
+      .carousel img{
+        width:250px;
+        height:160px;
+      }
+    }
+
+        
       </style>
 </head>
 <body>
@@ -409,13 +610,108 @@
               <li><a href="#">Jogos</a></li>
               <li><a href="#">Tabela</a></li>
               <li><a href="#">Ingressos</a></li>
-            </ul>
+          </ul>
 
       </header>
       <section>
+ <!-- ===== BANNER ===== -->
 
+ <section class="banner">
+  <div class="banner-content">
+    <h1>🏆 Copa do Mundo 2026</h1>
+    <p>Viva a emoção do maior campeonato de futebol do planeta.</p>
+    <button>Explorar Campeonato</button>
+  </div>
+</section>
+
+<!-- ===== TÓPICOS ===== -->
+
+<section class="topics">
+
+  <h2>Principais Tópicos</h2>
+
+  <div class="topic-grid">
+
+    <div class="topic">
+      <h3>⚽ Seleções</h3>
+      <p>Conheça os times favoritos da competição mundial.</p>
+    </div>
+
+    <div class="topic">
+      <h3>🏟️ Estádios</h3>
+      <p>Veja os estádios incríveis que receberão os jogos.</p>
+    </div>
+
+    <div class="topic">
+      <h3>🔥 Artilheiros</h3>
+      <p>Os craques que prometem dominar o campeonato.</p>
+    </div>
+
+    <div class="topic">
+      <h3>📅 Jogos</h3>
+      <p>Acompanhe o calendário completo da Copa.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== CARDS ===== -->
+
+<section class="cards-section">
+
+  <h2>Destaques da Copa</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop" alt="">
+      <div class="card-content">
+        <h3>Grandes Confrontos</h3>
+        <p>As maiores seleções do mundo disputando o troféu mais desejado do futebol.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=1200&auto=format&fit=crop" alt="">
+      <div class="card-content">
+        <h3>Torcida Mundial</h3>
+        <p>A energia das torcidas transforma cada partida em um espetáculo inesquecível.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=1200&auto=format&fit=crop" alt="">
+      <div class="card-content">
+        <h3>Momentos Históricos</h3>
+        <p>Reviva lances épicos e emoções que marcaram gerações.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===== CARROSSEL ===== -->
+
+<section class="carousel-section">
+
+  <h2>Galeria da Copa</h2>
+
+  <div class="carousel">
+
+    <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?q=80&w=1200&auto=format&fit=crop" alt="">
+    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=1200&auto=format&fit=crop" alt="">
+    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=1200&auto=format&fit=crop" alt="">
+    <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?q=80&w=1200&auto=format&fit=crop" alt="">
+
+  </div>
+
+</section>
       </section>
       <footer>
+
+        <p>🏆 Copa do Mundo 2026 • Todos os direitos reservados</p>
         <p>Felipe costa</p>
       </footer>
     </Div>
